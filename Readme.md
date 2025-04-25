@@ -5,7 +5,7 @@
 ### If you do like this repo give a star for it.
 
 
-## What is Docker ?
+## 🐳 What is Docker ?
 
 A container is a standard unit of software that packages up code and all its dependencies so the application runs quickly and reliably from one computing environment to another. 
 
@@ -38,9 +38,11 @@ Docker is a set of platform as a service products that use OS-level virtualizati
 | **Startup Time**     | Fast                                          | Slow                                       |
 ---------------------------------------------------------------------------------------------------------------------
 
-## Docker Architecture
+## 🐳 Docker Architecture
 
 Docker uses a client-server architecture to build, ship, and run applications as lightweight containers.
+
+![Docker Architecture](\Images\Docker-architecture.png)
 
 ### 🛠️ Docker Architecture Overview
 
