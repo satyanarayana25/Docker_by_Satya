@@ -44,6 +44,7 @@ Docker uses a client-server architecture to build, ship, and run applications as
 
 ![Docker Architecture](https://github.com/satyanarayana25/Docker_by_Satya/tree/Main/Images/Docker-architecture.png)
 
+
 ### 🛠️ Docker Architecture Overview
 
 - **Docker Client**  
