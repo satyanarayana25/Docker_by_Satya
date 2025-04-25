@@ -8,22 +8,38 @@ Containers include everything needed to run an application, such as the code, ru
 
 docker --version	#Show Docker version installed
 docker info	        #Display system-wide Docker info
+
 docker pull <image name>	#Download image from Docker Hub
 docker images	#List all downloaded images
+
 docker ps	#List running containers
 docker ps -a	#List all containers (including stopped)
+
 docker run <image>	#Run a container from an image
 docker run -d <image>	#Run container in detached mode
+
 docker run -it <image>	#Run container interactively
+docker run -dit --name <custom container name> <image name>
+
+
 docker exec -it <container> #bash	Open a shell inside a running container
+docker attach <container name or container id> # to login to container and connect to it.
+
+
 docker stop <container>	#Stop a running container
 docker start <container>	#Start a stopped container
 docker restart <container>	#Restart a container
+
 docker rm <container>	#Remove a container
 docker rmi <image>	#Remove an image
+
 docker build -t <name> .	#Build an image from a Dockerfile
+
 docker logs <container>	#View logs of a container
+
 docker network ls	#List Docker networks
+
 docker volume ls	#List Docker volumes
+
 docker-compose up	#Start services using docker-compose.yml
 docker-compose down	#Stop and remove containers/services
