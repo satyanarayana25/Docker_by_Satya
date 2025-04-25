@@ -10,6 +10,3 @@ Containers include everything needed to run an application, such as the code, ru
 Check the installed Docker version your system: Docker --version 
 
 it will output the Docker version along with additional information like the build number.
-
-
-try to add this to Github
