@@ -1,0 +1,15 @@
+# Docker Basics
+
+## Introduction to Docker
+Docker is an open-source platform that enables developers to automate the deployment of applications inside lightweight, portable containers. 
+Containers include everything needed to run an application, such as the code, runtime, libraries, and system tools, ensuring consistency across different environments.
+
+## Basic Docker Commands
+
+### 1. Docker Version
+Check the installed Docker version your system: Docker --version 
+
+it will output the Docker version along with additional information like the build number.
+
+
+try to add this to Github
