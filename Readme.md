@@ -1,9 +1,8 @@
-# Hey ! This is satya i am make this repo make in my mind to explain the basic concept from the basic to advance level to my best i love teaching to people and i would like to share my experience and use case. 
+## Hey ! This is satya i am make this repo make in my mind to explain the basic concept from the basic to advance level to my best i love teaching to people and i would like to share my experience and use case. 
 
 ## I love to upskill my self i am open to do colobartion as well....
 
-## if you do like this repo Give a star for it.
-
+## If you do like this repo Give a star for it.
 
 
 # What is Docker ?
