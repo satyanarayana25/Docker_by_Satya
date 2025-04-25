@@ -42,7 +42,7 @@ Docker is a set of platform as a service products that use OS-level virtualizati
 
 Docker uses a client-server architecture to build, ship, and run applications as lightweight containers.
 
-![Docker Architecture](\Images\Docker-architecture.png)
+![Docker Architecture](https://github.com/satyanarayana25/Docker_by_Satya/tree/Main/Images/Docker-architecture.png)
 
 ### 🛠️ Docker Architecture Overview
 
