@@ -90,6 +90,19 @@ Docker uses a client-server architecture to build, ship, and run applications as
 - **Isolation**: Each container runs in its own isolated environment.
 - **Resource Efficiency**: Containers are lightweight compared to VMs, sharing the host OS kernel.
 
+## 🧱 Docker Image vs Docker Container
+
+| Aspect            | Docker Image                                       | Docker Container                                     |
+|-------------------|--------------------------------------------------------|------------------------------------------------------|
+| Definition         | A read-only blueprint or template for containers      | A running instance of a Docker image                 |
+| State              | Static                                                | Dynamic (running process)                            |
+| Mutability         | Immutable (cannot be changed once built)              | Mutable (can be modified during execution)           |
+| Storage            | Stored on disk as layers                              | Lives in memory while running                        |
+| Use Case           | Used to create containers                             | Used to run applications from images                 |
+| Execution          | Cannot be executed directly                           | Can be executed to perform tasks                     |
+| Creation           | Built using Dockerfile                                | Created from Docker images using `docker run`        |
+| Lifecycle          | Permanent until deleted manually                      | Temporary (can be stopped, paused, or removed)       |
+
 
 
 
