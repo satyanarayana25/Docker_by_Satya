@@ -103,6 +103,55 @@ Docker uses a client-server architecture to build, ship, and run applications as
 | Creation           | Built using Dockerfile                                | Created from Docker images using `docker run`        |
 | Lifecycle          | Permanent until deleted manually                      | Temporary (can be stopped, paused, or removed)       |
 
+## 🧩 What Are Layers in Docker Images?
+
+Docker images are built in **layers**, and each layer represents an instruction in the Dockerfile (like `FROM`, `RUN`, `COPY`, etc.).
+
+### ✅ Key Points About Layers:
+
+- **Immutable**: Once a layer is created, it cannot be changed.
+- **Cached**: Docker reuses unchanged layers during rebuilds to make builds faster.
+- **Stacked**: Layers are stacked on top of a base image to create the final image.
+- **Shared**: Common layers between images are reused to save space and speed up image pulls.
+
+### 📦 Example:
+
+Given a Dockerfile:
+
+```Dockerfile
+FROM python:3.10-slim
+RUN apt-get update && apt-get install -y curl
+COPY . /app
+RUN pip install -r requirements.txt
+
+## 📦 What Are Container Layers?
+
+When a Docker container is created from an image, it adds a **writable container layer** on top of the read-only image layers.
+
+### 🧱 Layer Structure:
+
+- **Image Layers**: Read-only, built from the Dockerfile (e.g., OS, dependencies, app code).
+- **Container Layer**: Writable layer added when the container runs.
+
+This means:
+- Any changes (like file creation, modification, or deletion) happen in this top writable layer.
+- The underlying image remains unchanged.
+
+### 🛠️ Key Points:
+
+| Feature               | Description                                                                 |
+|------------------------|-----------------------------------------------------------------------------|
+| Writable Layer         | All runtime changes (logs, temp files, config changes) go here             |
+| Isolation              | Changes made in a container do not affect the base image                   |
+| Performance            | Lightweight and efficient — only changes are stored in the container layer |
+| Lifecycle              | Removed when the container is deleted                                      |
+
+### 🔁 Example:
+
+If your image has a file `/app/config.yaml` and your container modifies it,
+- The **original stays intact** in the image layer,
+- The **modified version is stored** in the container layer.
+
 
 
 
