@@ -43,3 +43,43 @@ docker volume ls	#List Docker volumes
 
 docker-compose up	#Start services using docker-compose.yml
 docker-compose down	#Stop and remove containers/services
+
+
+To login to docker hub or any other registry
+docker login
+
+To seach images 
+docker search <image name>
+docker search httpd
+
+To pull images (if you dont specify the version it will pull image with latest tag)
+docker pull <image name>
+docker pull httpd
+
+To pull a specific version of image
+docker pull <image name:version>
+docker pull httpd:2.4
+
+To list images in docker host
+docker images or docker image ls
+
+To know details about an image
+docker inspect <image name>
+docker inspect httpd
+
+To look at the history of an image
+docker image history <image name>
+docker image history httpd
+
+To filter dangling images
+docker images -f dangling=true
+
+To remove an image
+docker rmi <image name>
+docker rmi httpd
+
+To remove all dangling images
+docker image prune
+
+To remove all images which doesn't have a container associated with them
+docker image prune -a
