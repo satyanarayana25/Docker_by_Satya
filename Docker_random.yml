@@ -1,0 +1,47 @@
+# Writing a full-featured Dockerfile with most common Dockerfile instructions
+dockerfile_content: |
+  # Base image
+  FROM python:3.9-slim
+
+  # Maintainer label
+  LABEL maintainer="your-email@example.com"
+
+  # Environment variable
+  ENV APP_HOME=/app
+
+  # Set working directory
+  WORKDIR $APP_HOME
+
+  # Copy application files
+  COPY . $APP_HOME
+
+  # Add additional files (e.g., remote archives or local tarballs)
+  # This example assumes you have a file named data.tar.gz in your build context
+  # ADD data.tar.gz /data/
+
+  # Run commands to install dependencies
+  RUN apt-get update && apt-get install -y \
+      curl \
+      git \
+      && rm -rf /var/lib/apt/lists/*
+
+  # Install Python dependencies
+  RUN pip install --no-cache-dir -r requirements.txt
+
+  # Set a non-root user (optional)
+  # USER appuser
+
+  # Expose a port
+  EXPOSE 5000
+
+  # Health check for container
+  HEALTHCHECK --interval=30s --timeout=10s --start-period=5s --retries=3 \
+    CMD curl -f http://localhost:5000/health || exit 1
+
+  # Default command
+  CMD ["python", "app.py"]
+
+  # Entry point
+  # ENTRYPOINT ["python", "app.py"]
+
+
